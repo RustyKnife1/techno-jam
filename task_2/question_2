@@ -1,0 +1,5 @@
+class Solution:
+    def luckyNumbers (self, mat: List[List[int]]) -> List[int]:
+        mins = set([min(m) for m in mat])
+        maxes = set([max(i) for i in zip(*mat)])
+        return mins.intersection(maxes)
